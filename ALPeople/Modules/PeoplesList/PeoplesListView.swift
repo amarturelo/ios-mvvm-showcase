@@ -23,7 +23,7 @@ class PeoplesListView: UIView {
         super.init(frame: .zero)
         self.backgroundColor = .white
         tableView.backgroundColor = .white
-        tableView.allowsSelection = false
+        //tableView.allowsSelection = false
         tableView.register(PeopleTableViewCell.self, forCellReuseIdentifier: PeopleTableViewCell.reuseIdentifier)
 
         addSubview(tableView)

@@ -10,7 +10,7 @@ import Foundation
 import UIKit
 import Swinject
 import RxCocoa
-import Kingfisher
+import RxSwift
 
 class PeoplesListViewController: BaseViewController {
 
@@ -30,7 +30,7 @@ class PeoplesListViewController: BaseViewController {
     private func setupSearchController() {
         let searchController = UISearchController(searchResultsController: nil)
         searchController.searchResultsUpdater = self
-        
+
         searchController.obscuresBackgroundDuringPresentation = false
         searchController.searchBar.placeholder = "Search peoples"
         //searchController.searchBar.tintColor = .blue
@@ -54,20 +54,20 @@ class PeoplesListViewController: BaseViewController {
                 }
                 .disposed(by: disposeBag)
 
-        /*mainView.tableView.rx.modelSelected(People.self)
-                .subscribe { event in
-                    switch event {
-                    case .next(let value):
-                        print(value)
-                        break
-                    case .error(_):
-                        break
-                    case .completed:
-                        break
-                    @unknown default:
-                        break
-                    }
-                }.disposed(by: disposeBag)*/
+        mainView.tableView
+                .rx
+                .modelSelected(People.self)
+                //.asDriver()
+                .subscribe(onNext: { [unowned self] people in
+                    print(people)
+                    self.goToDetails(people: people)
+                })
+                .disposed(by: disposeBag)
+    }
+
+    private func goToDetails(people: People) {
+        let vc = PeopleDetailsViewController.create(people: people)
+        self.present(UINavigationController(rootViewController: vc), animated: true)
     }
 
     private func setupTableView() {
