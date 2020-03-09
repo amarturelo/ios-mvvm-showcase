@@ -13,8 +13,13 @@ extension Container {
     static let sharedContainer: Container = {
         let container = Container()
 
+        container.register(PeopleClient.self) { _ in
+            //PeopleClientImpl(peopleService: MoyaProvider<PeopleService>(plugins: [NetworkLoggerPlugin()]))
+            PeopleClientImpl(peopleService: MoyaProvider<PeopleService>())
+        }
+
         container.register(PeopleRepository.self) { resolver in
-            PeopleRepositoryImpl()
+            PeopleRepositoryImpl(peopleClient: resolver.resolve(PeopleClient.self)!)
         }.inObjectScope(.container)
 
         container.register(PeoplesListViewModel.self) { resolver in

@@ -9,10 +9,15 @@
 import RxSwift
 
 class PeopleRepositoryImpl: PeopleRepository {
-    
-    
-    func peoples(page: Int = 1, limit: Int = 30) -> Single<[People]> {
-        Single<[People]>.just([])
+
+    let peopleClient: PeopleClient
+
+    init(peopleClient: PeopleClient) {
+        self.peopleClient = peopleClient
     }
-    
+
+    func peoples(page: Int = 1, limit: Int = 30) -> Single<[People]> {
+        self.peopleClient.peoples(page: page, limit: limit)
+    }
+
 }
