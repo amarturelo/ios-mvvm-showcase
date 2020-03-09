@@ -116,7 +116,7 @@ class PeopleDetailsView: UIView {
                                         .direction(.row)
                                         .define { flex in
                                             flex.addItem({
-                                                let imageView = UIImageView(image: UIImage(systemName: "link"))
+                                                let imageView = UIImageView(image: UIImage(systemName: "envelope"))
                                                 return imageView
                                             }())
                                             flex.addItem()
@@ -165,7 +165,19 @@ class PeopleDetailsView: UIView {
                                         }
                                 flex.addItem()
                                         .height(10)
-                                flex.addItem(passwordLabel)
+
+                                flex.addItem()
+                                        .direction(.row)
+                                        .define { flex in
+                                            flex.addItem({
+                                                let imageView = UIImageView(image: UIImage(systemName: "lock"))
+                                                return imageView
+                                            }())
+                                            flex.addItem()
+                                                    .width(4)
+                                            flex.addItem(passwordLabel)
+
+                                        }
                             }
                 }
         addSubview(rootFlexContainer)
