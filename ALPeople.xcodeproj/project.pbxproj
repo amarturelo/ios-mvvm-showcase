@@ -30,6 +30,8 @@
 		7C405E232416B7CE008A9ED9 /* People.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C405E222416B7CE008A9ED9 /* People.swift */; };
 		7C405E262416B81D008A9ED9 /* PeopleTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C405E252416B81D008A9ED9 /* PeopleTableViewCell.swift */; };
 		7C405E272416D585008A9ED9 /* TestPeoplesListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A973DEAD3681FAFA8786DF6 /* TestPeoplesListViewModel.swift */; };
+		7C405E2B2416DA55008A9ED9 /* UITestPeoplesListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C405E2A2416DA55008A9ED9 /* UITestPeoplesListViewController.swift */; };
+		7C405E2E2416DCEF008A9ED9 /* XCUIApplication.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A973B5A942E1AB4B13710F2 /* XCUIApplication.swift */; };
 		9A973337DFF5B074927CFAD9 /* String+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A97389F7DC65707CE310649 /* String+Extensions.swift */; };
 		9A9734019610DA9F087AEC58 /* PeopleDetailsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A9731BE36C7985EDD193F16 /* PeopleDetailsViewModel.swift */; };
 		9A9734739F25D1D76B281E50 /* PeopleDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A973AECA9A22F2229CAC16C /* PeopleDetailsViewController.swift */; };
@@ -88,6 +90,7 @@
 		7C405E1F2416B79F008A9ED9 /* PeopleRepositoryImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PeopleRepositoryImpl.swift; sourceTree = "<group>"; };
 		7C405E222416B7CE008A9ED9 /* People.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = People.swift; sourceTree = "<group>"; };
 		7C405E252416B81D008A9ED9 /* PeopleTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PeopleTableViewCell.swift; sourceTree = "<group>"; };
+		7C405E2A2416DA55008A9ED9 /* UITestPeoplesListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UITestPeoplesListViewController.swift; sourceTree = "<group>"; };
 		8EEB817F7EFB7BCE4F91239B /* Pods-ALPeople-ALPeopleUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ALPeople-ALPeopleUITests.debug.xcconfig"; path = "Target Support Files/Pods-ALPeople-ALPeopleUITests/Pods-ALPeople-ALPeopleUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		9A9731819194A731CBFC4DD2 /* PeopleClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PeopleClient.swift; sourceTree = "<group>"; };
 		9A9731876CAE74D66310256E /* Date+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Date+Extensions.swift"; sourceTree = "<group>"; };
@@ -96,6 +99,7 @@
 		9A97384BEC9D951ECDB3955A /* MockPeopleRepository.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MockPeopleRepository.swift; sourceTree = "<group>"; };
 		9A97389F7DC65707CE310649 /* String+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "String+Extensions.swift"; sourceTree = "<group>"; };
 		9A973AECA9A22F2229CAC16C /* PeopleDetailsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PeopleDetailsViewController.swift; sourceTree = "<group>"; };
+		9A973B5A942E1AB4B13710F2 /* XCUIApplication.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = XCUIApplication.swift; sourceTree = "<group>"; };
 		9A973DEAD3681FAFA8786DF6 /* TestPeoplesListViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TestPeoplesListViewModel.swift; sourceTree = "<group>"; };
 		9A973E9698340494128E7484 /* PeopleService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PeopleService.swift; sourceTree = "<group>"; };
 		9A973FFD3716B49ECCBED375 /* PeopleClientImpl.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PeopleClientImpl.swift; sourceTree = "<group>"; };
@@ -199,6 +203,7 @@
 		7C405DFA2416B4D2008A9ED9 /* ALPeopleUITests */ = {
 			isa = PBXGroup;
 			children = (
+				7C405E2A2416DA55008A9ED9 /* UITestPeoplesListViewController.swift */,
 				7C405DFB2416B4D2008A9ED9 /* ALPeopleUITests.swift */,
 				7C405DFD2416B4D2008A9ED9 /* Info.plist */,
 			);
@@ -232,6 +237,7 @@
 				7C405E192416B74C008A9ED9 /* UIViewController+Extensions.swift */,
 				9A9731876CAE74D66310256E /* Date+Extensions.swift */,
 				9A97389F7DC65707CE310649 /* String+Extensions.swift */,
+				9A973B5A942E1AB4B13710F2 /* XCUIApplication.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -640,6 +646,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				7C405DFC2416B4D2008A9ED9 /* ALPeopleUITests.swift in Sources */,
+				7C405E2E2416DCEF008A9ED9 /* XCUIApplication.swift in Sources */,
+				7C405E2B2416DA55008A9ED9 /* UITestPeoplesListViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

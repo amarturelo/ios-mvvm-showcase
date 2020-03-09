@@ -13,6 +13,8 @@ class PeopleDetailsViewController: BaseViewController {
 
     var people: People!
 
+    static let identifier = "PeopleDetailsViewController"
+
     let viewModel = Container.sharedContainer.resolve(PeopleDetailsViewModel.self)!
 
     fileprivate var mainView: PeopleDetailsView {
@@ -25,6 +27,7 @@ class PeopleDetailsViewController: BaseViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.view.accessibilityIdentifier = PeopleDetailsViewController.identifier
 
         self.mainView.emailLabel.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(self.mailAction)))
         self.mainView.addressLabel.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(self.mapAction)))
