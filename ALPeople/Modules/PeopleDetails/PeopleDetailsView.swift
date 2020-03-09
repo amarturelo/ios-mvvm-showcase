@@ -112,16 +112,57 @@ class PeopleDetailsView: UIView {
                                 }())
                                 flex.addItem()
                                         .height(10)
-                                flex.addItem(emailLabel)
+                                flex.addItem()
+                                        .direction(.row)
+                                        .define { flex in
+                                            flex.addItem({
+                                                let imageView = UIImageView(image: UIImage(systemName: "link"))
+                                                return imageView
+                                            }())
+                                            flex.addItem()
+                                                    .width(4)
+                                            flex.addItem(emailLabel)
+                                        }
                                 flex.addItem()
                                         .height(10)
-                                flex.addItem(phoneLabel)
+                                flex.addItem()
+                                        .direction(.row)
+                                        .define { flex in
+                                            flex.addItem({
+                                                let imageView = UIImageView(image: UIImage(systemName: "phone"))
+                                                return imageView
+                                            }())
+                                            flex.addItem()
+                                                    .width(4)
+                                            flex.addItem(phoneLabel)
+                                        }
                                 flex.addItem()
                                         .height(10)
-                                flex.addItem(addressLabel)
+                                flex.addItem()
+                                        .direction(.row)
+                                        .define { flex in
+                                            flex.addItem({
+                                                let imageView = UIImageView(image: UIImage(systemName: "location"))
+                                                return imageView
+                                            }())
+                                            flex.addItem()
+                                                    .width(4)
+                                            flex.addItem(addressLabel)
+                                        }
                                 flex.addItem()
                                         .height(10)
-                                flex.addItem(usernameLabel)
+                                flex.addItem()
+                                        .direction(.row)
+                                        .define { flex in
+                                            flex.addItem({
+                                                let imageView = UIImageView(image: UIImage(systemName: "person"))
+                                                return imageView
+                                            }())
+                                            flex.addItem()
+                                                    .width(4)
+                                            flex.addItem(usernameLabel)
+
+                                        }
                                 flex.addItem()
                                         .height(10)
                                 flex.addItem(passwordLabel)

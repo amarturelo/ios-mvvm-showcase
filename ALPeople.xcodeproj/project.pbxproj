@@ -36,6 +36,7 @@
 		9A973575265A3929D2C0FBE7 /* PeopleService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A973E9698340494128E7484 /* PeopleService.swift */; };
 		9A97388AE95DE9BC71C7B9A4 /* PeopleClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A9731819194A731CBFC4DD2 /* PeopleClient.swift */; };
 		9A973AE4F5B1E35CF5ABF137 /* PeopleDetailsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A97320BEE5360339278B5EC /* PeopleDetailsView.swift */; };
+		9A973EA4F4DEA5E7A9DDFA99 /* TestPeoplesListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A973DEAD3681FAFA8786DF6 /* TestPeoplesListViewModel.swift */; };
 		9A973EAD06CAA9A416EF34DA /* PeopleClientImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A973FFD3716B49ECCBED375 /* PeopleClientImpl.swift */; };
 /* End PBXBuildFile section */
 
@@ -93,6 +94,7 @@
 		9A97320BEE5360339278B5EC /* PeopleDetailsView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PeopleDetailsView.swift; sourceTree = "<group>"; };
 		9A97389F7DC65707CE310649 /* String+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "String+Extensions.swift"; sourceTree = "<group>"; };
 		9A973AECA9A22F2229CAC16C /* PeopleDetailsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PeopleDetailsViewController.swift; sourceTree = "<group>"; };
+		9A973DEAD3681FAFA8786DF6 /* TestPeoplesListViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TestPeoplesListViewModel.swift; sourceTree = "<group>"; };
 		9A973E9698340494128E7484 /* PeopleService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PeopleService.swift; sourceTree = "<group>"; };
 		9A973FFD3716B49ECCBED375 /* PeopleClientImpl.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PeopleClientImpl.swift; sourceTree = "<group>"; };
 		A4897432972C138117764A3F /* Pods-ALPeopleTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ALPeopleTests.debug.xcconfig"; path = "Target Support Files/Pods-ALPeopleTests/Pods-ALPeopleTests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -186,6 +188,7 @@
 			children = (
 				7C405DF02416B4D2008A9ED9 /* ALPeopleTests.swift */,
 				7C405DF22416B4D2008A9ED9 /* Info.plist */,
+				9A973DB3BF511E015EEE9040 /* ViewModels */,
 			);
 			path = ALPeopleTests;
 			sourceTree = "<group>";
@@ -306,6 +309,14 @@
 				9A97389F3D29FE38B6F818C7 /* Impl */,
 			);
 			path = Clients;
+			sourceTree = "<group>";
+		};
+		9A973DB3BF511E015EEE9040 /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				9A973DEAD3681FAFA8786DF6 /* TestPeoplesListViewModel.swift */,
+			);
+			path = ViewModels;
 			sourceTree = "<group>";
 		};
 		FBC2E5CEE46E40959AEAA584 /* Pods */ = {
@@ -600,6 +611,7 @@
 				9A9734019610DA9F087AEC58 /* PeopleDetailsViewModel.swift in Sources */,
 				9A97353048D09D44E85AB804 /* Date+Extensions.swift in Sources */,
 				9A973337DFF5B074927CFAD9 /* String+Extensions.swift in Sources */,
+				9A973EA4F4DEA5E7A9DDFA99 /* TestPeoplesListViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
