@@ -7,6 +7,7 @@ import UIKit
 import Swinject
 import RxSwift
 import Kingfisher
+import MapKit
 
 class PeopleDetailsViewController: BaseViewController {
 
@@ -66,6 +67,16 @@ class PeopleDetailsViewController: BaseViewController {
             print("Can't use comgooglemaps://");
         }
         //navigateUsingAppleMaps(to: location, locationName: people!.name.first)
+    }
+
+    private func navigateUsingAppleMaps(to coords: CLLocation, locationName: String? = nil) {
+        let placemark = MKPlacemark(coordinate: coords.coordinate, addressDictionary: nil)
+        let mapItem = MKMapItem(placemark: placemark)
+        mapItem.name = locationName
+        let launchOptions = [MKLaunchOptionsDirectionsModeKey: MKLaunchOptionsDirectionsModeDriving]
+        let currentLocationMapItem = MKMapItem.forCurrentLocation()
+
+        MKMapItem.openMaps(with: [currentLocationMapItem, mapItem], launchOptions: launchOptions)
     }
 
     private func observers() {
