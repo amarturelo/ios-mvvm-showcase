@@ -29,6 +29,7 @@
 		7C405E202416B79F008A9ED9 /* PeopleRepositoryImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C405E1F2416B79F008A9ED9 /* PeopleRepositoryImpl.swift */; };
 		7C405E232416B7CE008A9ED9 /* People.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C405E222416B7CE008A9ED9 /* People.swift */; };
 		7C405E262416B81D008A9ED9 /* PeopleTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C405E252416B81D008A9ED9 /* PeopleTableViewCell.swift */; };
+		9A973337DFF5B074927CFAD9 /* String+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A97389F7DC65707CE310649 /* String+Extensions.swift */; };
 		9A9734019610DA9F087AEC58 /* PeopleDetailsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A9731BE36C7985EDD193F16 /* PeopleDetailsViewModel.swift */; };
 		9A9734739F25D1D76B281E50 /* PeopleDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A973AECA9A22F2229CAC16C /* PeopleDetailsViewController.swift */; };
 		9A97353048D09D44E85AB804 /* Date+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A9731876CAE74D66310256E /* Date+Extensions.swift */; };
@@ -90,6 +91,7 @@
 		9A9731876CAE74D66310256E /* Date+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Date+Extensions.swift"; sourceTree = "<group>"; };
 		9A9731BE36C7985EDD193F16 /* PeopleDetailsViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PeopleDetailsViewModel.swift; sourceTree = "<group>"; };
 		9A97320BEE5360339278B5EC /* PeopleDetailsView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PeopleDetailsView.swift; sourceTree = "<group>"; };
+		9A97389F7DC65707CE310649 /* String+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "String+Extensions.swift"; sourceTree = "<group>"; };
 		9A973AECA9A22F2229CAC16C /* PeopleDetailsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PeopleDetailsViewController.swift; sourceTree = "<group>"; };
 		9A973E9698340494128E7484 /* PeopleService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PeopleService.swift; sourceTree = "<group>"; };
 		9A973FFD3716B49ECCBED375 /* PeopleClientImpl.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PeopleClientImpl.swift; sourceTree = "<group>"; };
@@ -223,6 +225,7 @@
 				7C405E172416B721008A9ED9 /* Container+Extensions.swift */,
 				7C405E192416B74C008A9ED9 /* UIViewController+Extensions.swift */,
 				9A9731876CAE74D66310256E /* Date+Extensions.swift */,
+				9A97389F7DC65707CE310649 /* String+Extensions.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -596,6 +599,7 @@
 				9A973AE4F5B1E35CF5ABF137 /* PeopleDetailsView.swift in Sources */,
 				9A9734019610DA9F087AEC58 /* PeopleDetailsViewModel.swift in Sources */,
 				9A97353048D09D44E85AB804 /* Date+Extensions.swift in Sources */,
+				9A973337DFF5B074927CFAD9 /* String+Extensions.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

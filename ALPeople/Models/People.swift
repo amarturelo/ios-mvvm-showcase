@@ -15,6 +15,8 @@ struct People {
     let bob: Bob
     let email: String
     let cell: String
+    let username: String
+    let password: String
     let location: Location
 
     init() {
@@ -24,12 +26,16 @@ struct People {
         bob = Bob()
         email = ""
         cell = ""
+        password = ""
+        username = ""
         location = Location(coordinates: Coordinates())
     }
 
     init(json: [String: Any]) {
         name = Name(json: json["name"] as! [String: Any])
         email = json["email"] as! String
+        username = (json["login"] as! [String: Any])["username"] as! String
+        password = (json["login"] as! [String: Any])["password"] as! String
         cell = json["cell"] as! String
         gender = Gender(rawValue: json["gender"] as! String)!
         picture = Picture(json: json["picture"] as! [String: Any])
@@ -104,13 +110,26 @@ struct Name: Codable, Equatable {
 // MARK: - Location
 struct Location: Codable {
     let coordinates: Coordinates
+    let city: String
+    let state: String
+    let country: String
 
     init(coordinates: Coordinates) {
         self.coordinates = coordinates
+        city = ""
+        state = ""
+        country = ""
     }
 
     init(json: [String: Any]) {
+        city = json["city"] as! String
+        state = json["state"] as! String
+        country = json["country"] as! String
         coordinates = Coordinates(json: json["coordinates"] as! [String: Any])
+    }
+
+    func address() -> String {
+        "\(city), \(state), \(country)"
     }
 
 }

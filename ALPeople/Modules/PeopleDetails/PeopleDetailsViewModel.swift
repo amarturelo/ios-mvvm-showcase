@@ -9,13 +9,10 @@ class PeopleDetailsViewModel: BaseViewModel {
 
     private var people: People!
 
-    let nameSubject = ReplaySubject<Name>.create(bufferSize: 1)
-
-    let avatarSubject = ReplaySubject<String>.create(bufferSize: 1)
+    let peopleSubject = ReplaySubject<People>.create(bufferSize: 1)
 
     func configure(people: People) {
-        nameSubject.onNext(people.name)
-        avatarSubject.onNext(people.picture.large)
+        peopleSubject.onNext(people)
     }
 
 }
