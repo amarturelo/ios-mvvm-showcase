@@ -6,6 +6,7 @@
 import UIKit
 import Swinject
 import RxSwift
+import Kingfisher
 
 class PeopleDetailsViewController: BaseViewController {
 
@@ -46,9 +47,29 @@ class PeopleDetailsViewController: BaseViewController {
 
                     }
                 }.disposed(by: self.disposeBag)
+
+        self.viewModel.avatarSubject
+                .observeOn(MainScheduler.instance)
+                .subscribe { event in
+                    switch event {
+                    case .next(let result):
+                        self.updateAvatarUI(avatar: result)
+                        break
+                    case .error(_):
+                        break
+                    case .completed:
+                        break
+
+                    }
+                }.disposed(by: self.disposeBag)
+    }
+
+    func updateAvatarUI(avatar: String) {
+        self.mainView.updateAvatar(url: avatar)
     }
 
     func updateNameUI(name: Name) {
+        self.mainView.updateFullName(fullName: name.fullName())
         self.configureNavigationBar(largeTitleColor: .black, backgroundColor: .white, tintColor: .blue, title: name.shortName(), preferredLargeTitle: true)
     }
 
