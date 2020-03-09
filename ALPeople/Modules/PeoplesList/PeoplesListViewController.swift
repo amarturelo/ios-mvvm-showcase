@@ -8,7 +8,6 @@
 
 import Foundation
 import UIKit
-import RxSwift
 import Swinject
 import RxCocoa
 import Kingfisher

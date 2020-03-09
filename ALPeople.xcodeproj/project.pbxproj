@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -19,6 +19,16 @@
 		7C405DF12416B4D2008A9ED9 /* ALPeopleTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C405DF02416B4D2008A9ED9 /* ALPeopleTests.swift */; };
 		7C405DFC2416B4D2008A9ED9 /* ALPeopleUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C405DFB2416B4D2008A9ED9 /* ALPeopleUITests.swift */; };
 		7C405E0B2416B533008A9ED9 /* PeoplesListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C405E0A2416B533008A9ED9 /* PeoplesListViewController.swift */; };
+		7C405E0E2416B674008A9ED9 /* PeoplesListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C405E0D2416B674008A9ED9 /* PeoplesListView.swift */; };
+		7C405E102416B6A9008A9ED9 /* PeoplesListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C405E0F2416B6A9008A9ED9 /* PeoplesListViewModel.swift */; };
+		7C405E142416B6ED008A9ED9 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C405E132416B6ED008A9ED9 /* BaseViewController.swift */; };
+		7C405E162416B6FF008A9ED9 /* BaseViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C405E152416B6FF008A9ED9 /* BaseViewModel.swift */; };
+		7C405E182416B721008A9ED9 /* Container+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C405E172416B721008A9ED9 /* Container+Extensions.swift */; };
+		7C405E1A2416B74C008A9ED9 /* UIViewController+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C405E192416B74C008A9ED9 /* UIViewController+Extensions.swift */; };
+		7C405E1D2416B784008A9ED9 /* PeopleRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C405E1C2416B784008A9ED9 /* PeopleRepository.swift */; };
+		7C405E202416B79F008A9ED9 /* PeopleRepositoryImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C405E1F2416B79F008A9ED9 /* PeopleRepositoryImpl.swift */; };
+		7C405E232416B7CE008A9ED9 /* People.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C405E222416B7CE008A9ED9 /* People.swift */; };
+		7C405E262416B81D008A9ED9 /* PeopleTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C405E252416B81D008A9ED9 /* PeopleTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -58,6 +68,16 @@
 		7C405DFB2416B4D2008A9ED9 /* ALPeopleUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ALPeopleUITests.swift; sourceTree = "<group>"; };
 		7C405DFD2416B4D2008A9ED9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		7C405E0A2416B533008A9ED9 /* PeoplesListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PeoplesListViewController.swift; sourceTree = "<group>"; };
+		7C405E0D2416B674008A9ED9 /* PeoplesListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PeoplesListView.swift; sourceTree = "<group>"; };
+		7C405E0F2416B6A9008A9ED9 /* PeoplesListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PeoplesListViewModel.swift; sourceTree = "<group>"; };
+		7C405E132416B6ED008A9ED9 /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
+		7C405E152416B6FF008A9ED9 /* BaseViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewModel.swift; sourceTree = "<group>"; };
+		7C405E172416B721008A9ED9 /* Container+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Container+Extensions.swift"; sourceTree = "<group>"; };
+		7C405E192416B74C008A9ED9 /* UIViewController+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Extensions.swift"; sourceTree = "<group>"; };
+		7C405E1C2416B784008A9ED9 /* PeopleRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PeopleRepository.swift; sourceTree = "<group>"; };
+		7C405E1F2416B79F008A9ED9 /* PeopleRepositoryImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PeopleRepositoryImpl.swift; sourceTree = "<group>"; };
+		7C405E222416B7CE008A9ED9 /* People.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = People.swift; sourceTree = "<group>"; };
+		7C405E252416B81D008A9ED9 /* PeopleTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PeopleTableViewCell.swift; sourceTree = "<group>"; };
 		8EEB817F7EFB7BCE4F91239B /* Pods-ALPeople-ALPeopleUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ALPeople-ALPeopleUITests.debug.xcconfig"; path = "Target Support Files/Pods-ALPeople-ALPeopleUITests/Pods-ALPeople-ALPeopleUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		A4897432972C138117764A3F /* Pods-ALPeopleTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ALPeopleTests.debug.xcconfig"; path = "Target Support Files/Pods-ALPeopleTests/Pods-ALPeopleTests.debug.xcconfig"; sourceTree = "<group>"; };
 		CE83F8ECC8D735CA77288F36 /* Pods-ALPeople-ALPeopleUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ALPeople-ALPeopleUITests.release.xcconfig"; path = "Target Support Files/Pods-ALPeople-ALPeopleUITests/Pods-ALPeople-ALPeopleUITests.release.xcconfig"; sourceTree = "<group>"; };
@@ -128,6 +148,10 @@
 		7C405DD82416B4D1008A9ED9 /* ALPeople */ = {
 			isa = PBXGroup;
 			children = (
+				7C405E212416B7BF008A9ED9 /* Models */,
+				7C405E1B2416B769008A9ED9 /* Repositories */,
+				7C405E122416B6DF008A9ED9 /* Common */,
+				7C405E112416B6BB008A9ED9 /* Extensions */,
 				7C405E092416B51F008A9ED9 /* Modules */,
 				7C405DD92416B4D1008A9ED9 /* AppDelegate.swift */,
 				7C405DDB2416B4D1008A9ED9 /* SceneDelegate.swift */,
@@ -169,9 +193,63 @@
 		7C405E0C2416B560008A9ED9 /* PeoplesList */ = {
 			isa = PBXGroup;
 			children = (
+				7C405E242416B803008A9ED9 /* Cells */,
 				7C405E0A2416B533008A9ED9 /* PeoplesListViewController.swift */,
+				7C405E0D2416B674008A9ED9 /* PeoplesListView.swift */,
+				7C405E0F2416B6A9008A9ED9 /* PeoplesListViewModel.swift */,
 			);
 			path = PeoplesList;
+			sourceTree = "<group>";
+		};
+		7C405E112416B6BB008A9ED9 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				7C405E172416B721008A9ED9 /* Container+Extensions.swift */,
+				7C405E192416B74C008A9ED9 /* UIViewController+Extensions.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		7C405E122416B6DF008A9ED9 /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				7C405E132416B6ED008A9ED9 /* BaseViewController.swift */,
+				7C405E152416B6FF008A9ED9 /* BaseViewModel.swift */,
+			);
+			path = Common;
+			sourceTree = "<group>";
+		};
+		7C405E1B2416B769008A9ED9 /* Repositories */ = {
+			isa = PBXGroup;
+			children = (
+				7C405E1E2416B795008A9ED9 /* Impl */,
+				7C405E1C2416B784008A9ED9 /* PeopleRepository.swift */,
+			);
+			path = Repositories;
+			sourceTree = "<group>";
+		};
+		7C405E1E2416B795008A9ED9 /* Impl */ = {
+			isa = PBXGroup;
+			children = (
+				7C405E1F2416B79F008A9ED9 /* PeopleRepositoryImpl.swift */,
+			);
+			path = Impl;
+			sourceTree = "<group>";
+		};
+		7C405E212416B7BF008A9ED9 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				7C405E222416B7CE008A9ED9 /* People.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		7C405E242416B803008A9ED9 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				7C405E252416B81D008A9ED9 /* PeopleTableViewCell.swift */,
+			);
+			path = Cells;
 			sourceTree = "<group>";
 		};
 		FBC2E5CEE46E40959AEAA584 /* Pods */ = {
@@ -184,7 +262,6 @@
 				A4897432972C138117764A3F /* Pods-ALPeopleTests.debug.xcconfig */,
 				543B961B96234B2BDE8E673B /* Pods-ALPeopleTests.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -447,8 +524,18 @@
 			files = (
 				7C405DDE2416B4D1008A9ED9 /* ViewController.swift in Sources */,
 				7C405E0B2416B533008A9ED9 /* PeoplesListViewController.swift in Sources */,
+				7C405E1A2416B74C008A9ED9 /* UIViewController+Extensions.swift in Sources */,
 				7C405DDA2416B4D1008A9ED9 /* AppDelegate.swift in Sources */,
+				7C405E202416B79F008A9ED9 /* PeopleRepositoryImpl.swift in Sources */,
+				7C405E102416B6A9008A9ED9 /* PeoplesListViewModel.swift in Sources */,
+				7C405E262416B81D008A9ED9 /* PeopleTableViewCell.swift in Sources */,
+				7C405E0E2416B674008A9ED9 /* PeoplesListView.swift in Sources */,
+				7C405E1D2416B784008A9ED9 /* PeopleRepository.swift in Sources */,
+				7C405E162416B6FF008A9ED9 /* BaseViewModel.swift in Sources */,
+				7C405E182416B721008A9ED9 /* Container+Extensions.swift in Sources */,
+				7C405E142416B6ED008A9ED9 /* BaseViewController.swift in Sources */,
 				7C405DDC2416B4D1008A9ED9 /* SceneDelegate.swift in Sources */,
+				7C405E232416B7CE008A9ED9 /* People.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
