@@ -26,6 +26,10 @@ extension Container {
             PeoplesListViewModel(peopleRepository: resolver.resolve(PeopleRepository.self)!)
         }
 
+        container.register(PeopleDetailsViewModel.self) { resolver in
+            PeopleDetailsViewModel()
+        }
+
         return container
     }()
 }

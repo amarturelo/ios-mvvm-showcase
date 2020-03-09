@@ -16,7 +16,7 @@ struct People {
     let email: String
     let cell: String
     let location: Location
-    
+
     init() {
         name = Name()
         gender = .male
@@ -26,7 +26,7 @@ struct People {
         cell = ""
         location = Location(coordinates: Coordinates())
     }
-    
+
     init(json: [String: Any]) {
         name = Name(json: json["name"] as! [String: Any])
         email = json["email"] as! String
@@ -39,7 +39,7 @@ struct People {
 }
 
 extension People: Equatable {
-    
+
     public static func ==(lhs: People, rhs: People) -> Bool {
         if lhs.gender != rhs.gender {
             return false
@@ -66,23 +66,27 @@ extension People: Equatable {
 // MARK: - Name
 struct Name: Codable, Equatable {
     let title, first, last: String
-    
+
     init() {
         title = ""
         first = ""
         last = ""
     }
-    
+
     init(json: [String: Any]) {
         title = json["title"] as! String
         first = json["first"] as! String
         last = json["last"] as! String
     }
-    
+
     func fullName() -> String {
         "\(title) \(first) \(last)"
     }
-    
+
+    func shortName() -> String {
+        "\(title) \(first)"
+    }
+
     static func ==(lhs: Name, rhs: Name) -> Bool {
         if lhs.title != rhs.title {
             return false
@@ -100,31 +104,31 @@ struct Name: Codable, Equatable {
 // MARK: - Location
 struct Location: Codable {
     let coordinates: Coordinates
-    
+
     init(coordinates: Coordinates) {
         self.coordinates = coordinates
     }
-    
+
     init(json: [String: Any]) {
         coordinates = Coordinates(json: json["coordinates"] as! [String: Any])
     }
-    
+
 }
 
 // MARK: - Coordinates
 struct Coordinates: Codable {
     let latitude, longitude: String
-    
+
     init() {
         latitude = ""
         longitude = ""
     }
-    
+
     init(json: [String: Any]) {
         latitude = json["latitude"] as! String
         longitude = json["longitude"] as! String
     }
-    
+
     static func ==(lhs: Coordinates, rhs: Coordinates) -> Bool {
         if lhs.latitude != rhs.latitude {
             return false
@@ -139,19 +143,19 @@ struct Coordinates: Codable {
 // MARK: - Picture
 struct Picture: Codable, Equatable {
     let large, medium, thumbnail: String
-    
+
     init() {
         large = ""
         medium = ""
         thumbnail = ""
     }
-    
+
     init(json: [String: Any]) {
         large = json["large"] as! String
         medium = json["medium"] as! String
         thumbnail = json["thumbnail"] as! String
     }
-    
+
     static func ==(lhs: Picture, rhs: Picture) -> Bool {
         if lhs.large != rhs.large {
             return false
@@ -169,24 +173,24 @@ struct Picture: Codable, Equatable {
 struct Bob: Codable, Equatable {
     let age: Int
     let date: Date
-    
+
     init() {
         age = 0
         date = Date()
     }
-    
+
     init(json: [String: Any]) {
         age = json["age"] as! Int
         let string = json["date"] as! String
-        
+
         let RFC3339DateFormatter = DateFormatter()
         RFC3339DateFormatter.locale = Locale(identifier: "en_US_POSIX")
         RFC3339DateFormatter.dateFormat = "yyyy-MM-dd'T'HH:mm:ss.SSS'Z'"
         RFC3339DateFormatter.timeZone = TimeZone(secondsFromGMT: 0)
-        
+
         self.date = RFC3339DateFormatter.date(from: string)!
     }
-    
+
     static func ==(lhs: Bob, rhs: Bob) -> Bool {
         if lhs.age != rhs.age {
             return false
