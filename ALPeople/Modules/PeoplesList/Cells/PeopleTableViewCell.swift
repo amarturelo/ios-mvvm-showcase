@@ -62,7 +62,7 @@ class PeopleTableViewCell: UITableViewCell {
                                                     .define { flex in
                                                         flex.addItem({
                                                             let label = UILabel()
-                                                            label.text = "BirdDay:"
+                                                            label.text = "Birthday:"
                                                             label.font = UIFont.systemFont(ofSize: 14, weight: .semibold)
                                                             label.textColor = UIColor.darkText.withAlphaComponent(0.8)
                                                             label.numberOfLines = 1
@@ -85,11 +85,7 @@ class PeopleTableViewCell: UITableViewCell {
         fullNameLabel.text = people.name.fullName()
         fullNameLabel.flex.markDirty()
 
-        let dateFormatter = DateFormatter()
-        dateFormatter.locale = Locale(identifier: "en_US")
-        dateFormatter.setLocalizedDateFormatFromTemplate("MMMMd, YYYY")
-
-        birdDate.text = dateFormatter.string(from: people.bob.date)
+        birdDate.text = people.bob.date.prettyDate()
         birdDate.flex.markDirty()
 
         setNeedsLayout()
